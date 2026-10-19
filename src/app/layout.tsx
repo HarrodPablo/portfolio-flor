@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Dancing_Script, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const anton = Anton({
@@ -53,6 +55,8 @@ export default function RootLayout({
           className="pointer-events-none fixed inset-0 z-50 opacity-[0.38] mix-blend-multiply bg-paper-noise"
         />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
